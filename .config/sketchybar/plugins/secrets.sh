@@ -1,0 +1,2 @@
+export WEATHER_API_KEY="3f1635bc3ac5491eb95143948220307"
+export CITY="Brisbane"
