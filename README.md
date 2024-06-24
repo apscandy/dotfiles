@@ -104,7 +104,7 @@ The command can be found [here](https://github.com/tmux-plugins/tpm?tab=readme-o
 ### Step 6: Clone this repository and setup.
 #### Step 6.1: Cloing the repository.
 ```sh
-git clone https://github.com/apscandy/my-stow-dotfiles.git .dotfiles
+git clone https://github.com/apscandy/dotfiles.git .dotfiles
 ```
 #### step 6.2: Setting the dotfiles.
 Now we need to `cd` in the repository we just cloned with the command:
