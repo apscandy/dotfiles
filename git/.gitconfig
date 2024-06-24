@@ -25,20 +25,11 @@
     ch = checkout
     br = branch
     st = status
-    br = branch
     cm = commit -m
     back = reset --soft HEAD~1
     hard = reset --hard
     last = log -1 HEAD
-    aa = !git add -A && git status
-    cma = !git add -A && git commit -m
     wclone = clone --bare
     wa = worktree add
     wl = worktree list
     wr = worktree remove
-[credential "https://github.com"]
-	helper = 
-	helper = !/home/andy/.nix-profile/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/home/andy/.nix-profile/bin/gh auth git-credential
