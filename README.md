@@ -9,20 +9,34 @@ eza bat git fzf gnumake lazydocker lazygit gh neovim tmux stow fastfetch zoxide 
 ```
 Once the software is installed, run stow on the package you want (you know the drill).
 
-## For beginnersers and intermediates.
+## For beginners and intermediates.
+
+### Mac and Linux users
+since windows terminal is only for well.. windows, for other operating systems I recommend kitty, which can be installed with.
+```sh
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+```
+command can be found [here](https://sw.kovidgoyal.net/kitty/binary/).
+
+I still recommend installing jet brains mono nerd font in steps 1.1.
+When you get to step 6.2.2 run 
+```sh
+stow kitty
+```
+to apply the theme, font and settings.
 
 ### Step 1: Setup windows terminal.
 This step is for windows terminal users. If you have not installed windows terminal [click here](https://learn.microsoft.com/en-us/windows/terminal/install), you will need wsl2 set up so you will need that completely set up and running Ubuntu [click here](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 #### Step 1.1: Install font.
-Once the windows terminal is installed and wsl2 is set up, we need to install jetbrains mono nerdfont from [here](https://www.nerdfonts.com/font-downloads).
+Once the windows terminal is installed and wsl2 is set up, we need to install jet brains mono nerd font from [here](https://www.nerdfonts.com/font-downloads).
 I have a link here on how to install [fonts](https://support.microsoft.com/en-au/office/add-a-font-b7c5f17c-4426-4b53-967f-455339c564c1).
 I recommend after downloading and extracting, press `ctrl + a` then right click `install`.
 
 #### Step 1.2: Install colour theme.
-For this step I reommend having vscode installed and ready to go.
+For this step I recommend having vscode installed and ready to go.
 I am personally using Catppuccin Mocha as its a nice dark pastel theme, but you can choose any theme you like.
-Catppuccin have in incredable README on how to install a theme (including their theme) to the windows termial which can be found [here](https://github.com/catppuccin/windows-terminal).
+Catppuccin have in incredible README on how to install a theme (including their theme) to the windows terminal which can be found [here](https://github.com/catppuccin/windows-terminal).
 
 
 ### Step 2: Zsh.
@@ -30,7 +44,7 @@ When setting up wsl2 Ubuntu, I would recommend running the following command to 
 ```sh
 sudo apt update -y && sudo apt upgrade -y
 ```
-and run
+and run to get build tools for neovim, mason and tree-sitter.
 
 ```sh
 sudo apt-get install build-essential 
@@ -64,7 +78,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 The command can be found [here](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh).
 
 ### Step 3: A pretty prompt.
-To make the terminal prompt aesthetically pleasing and performant nstall star ship. Run this commend to install it:
+To make the terminal prompt aesthetically pleasing and performant install starship. Run this commend to install it:
 ```sh
 curl -sS https://starship.rs/install.sh | sh
 ```
@@ -121,5 +135,29 @@ source ~/.zshrc
 bat cache --build
 ```
 Start a tmux session and press `crtl + space` then capital `I` to install tmux configs,
-Then, open up nvim and let lazy install all plugins and packages,
+Then, open up nvim and let lazy install all plugins and packages.
+
+### Step 8 setting up working directories and ssh keys
+First we need to make our ssh key with the following.
+```sh
+ssh-keygen -t ed25519 -C "<EMAIL>"
+```
+After that we need to tell the global git config to use the key.
+```sh
+git config --global user.signingkey ~/.ssh/examplekey.pub
+```
+Finally setting up the working directory
+
+```sh
+mkdir -p ~/Code/Work
+mkdir -p ~/Code/Personal
+mkdir -p ~/Code/University
+mkdir -p ~/Code/Hackathon
+mkdir -p ~/Notes/01-Projects
+mkdir -p ~/Notes/02-Area
+mkdir -p ~/Notes/03-Resources
+mkdir -p ~/Notes/04-Archive
+```
+so it should look like the following
+![](docs/images/folder-struct.png)
 
