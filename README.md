@@ -11,24 +11,6 @@ Once the software is installed, run stow on the package you want (you know the d
 
 ## For beginnersers and intermediates.
 
-### Note wsl2 fixs
-
-#### Locale
-first try
-```sh
-sudo update-locale LANG=en_US.UTF8
-```
-if that does not work then try the following
-```sh
-sudo locale-gen "en_US.UTF-8"
-sudo dpkg-reconfigure locales
-```
-
-#### Build essential
-```sh
-sudo apt-get install build-essential 
-```
-
 ### Step 1: Setup windows terminal.
 This step is for windows terminal users. If you have not installed windows terminal [click here](https://learn.microsoft.com/en-us/windows/terminal/install), you will need wsl2 set up so you will need that completely set up and running Ubuntu [click here](https://learn.microsoft.com/en-us/windows/wsl/install).
 
@@ -47,6 +29,11 @@ Catppuccin have in incredable README on how to install a theme (including their 
 When setting up wsl2 Ubuntu, I would recommend running the following command to update and upgrade the packages:
 ```sh
 sudo apt update -y && sudo apt upgrade -y
+```
+and run
+
+```sh
+sudo apt-get install build-essential 
 ```
 
 #### Step 2.1: Installing zsh.
