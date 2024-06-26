@@ -11,6 +11,9 @@ Once the software is installed, run stow on the package you want (you know the d
 
 ## For beginners and intermediates.
 
+### Youtube tutorial 
+[YouTube video](https://youtu.be/vCl7XNu8dXQ)
+
 ### Mac and Linux users
 since windows terminal is only for well.. windows, for other operating systems I recommend kitty, which can be installed with.
 ```sh
@@ -90,6 +93,7 @@ The command can be found [here](https://starship.rs/guide/#%F0%9F%9A%80-installa
 sh <(curl -L https://nixos.org/nix/install) --daemon
 ```
 Go through the prompt answering all the prompts, and when it says it will only work after a restart just close the terminal and reopen it. No restart necessary.
+Command can be found [here](https://nixos.org/download/)
 
 #### Step 4.2: Installing packages.
 ```sh
