@@ -20,7 +20,7 @@ palette = "catppuccin_mocha"
 command_timeout = 1000
 
 [git_branch]
-format =  '[ $branch(:$remote_branch)](bold red)'
+format =  '[ $branch(:$remote_branch)](bold red) '
 
 [git_commit]
 format = '[\($hash$tag\)](bold red) '
@@ -35,13 +35,13 @@ format = '([+$added](bold red) )([-$deleted](bold red) )'
 disabled = true
 
 [golang]
-format = '[ $version ](bold green)'
+format = '[ $version](bold green) '
 
 [nodejs]
-format = '[  $version ](bold green)'
+format = '[  $version](bold green) '
 
 [python]
-format = '[ $version ](bold green)'
+format = '[ $version](bold green) '
 
 [directory]
 format ='[$path](bold blue)[$read_only]($read_only_style) '
