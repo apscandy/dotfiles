@@ -5,7 +5,7 @@
 ## For experts.
 If you are an expert with the terminal and dot files, this is just a gnu stow setup. Simply install the software listed below in your favourite package manager. 
 ```sh
-eza bat git fzf gnumake lazydocker lazygit gh neovim tmux stow fastfetch zoxide jq ripgrep cloudflared
+eza bat git fzf gnumake lazydocker lazygit gh neovim tmux stow fastfetch zoxide jq ripgrep cloudflared libgcc
 ```
 Once the software is installed, run stow on the package you want (you know the drill).
 
@@ -93,7 +93,7 @@ Go through the prompt answering all the prompts, and when it says it will only w
 
 #### Step 4.2: Installing packages.
 ```sh
-nix-env -iA nixpkgs.eza nixpkgs.bat nixpkgs.git nixpkgs.fzf nixpkgs.gnumake nixpkgs.lazydocker nixpkgs.lazygit nixpkgs.gh nixpkgs.neovim nixpkgs.tmux nixpkgs.stow nixpkgs.fastfetch nixpkgs.zoxide nixpkgs.jq nixpkgs.ripgrep nixpkgs.cloudflared
+nix-env -iA nixpkgs.eza nixpkgs.bat nixpkgs.git nixpkgs.fzf nixpkgs.gnumake nixpkgs.lazydocker nixpkgs.lazygit nixpkgs.gh nixpkgs.neovim nixpkgs.tmux nixpkgs.stow nixpkgs.fastfetch nixpkgs.zoxide nixpkgs.jq nixpkgs.ripgrep nixpkgs.cloudflared nixpkgs.libgcc
 ```
 
 ### Step 5: Installing Tmux Package Manager (TPM).
