@@ -17,3 +17,5 @@ https://docs.gitlab.com/ee/user/project/repository/signed_commits/ssh.html
 
 
 https://fortelabs.com/blog/para/
+
+https://www.youtube.com/watch?v=aolI_Rz0ZqY
