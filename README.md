@@ -153,14 +153,14 @@ git config --global user.signingkey ~/.ssh/examplekey.pub
 Finally setting up the working directory
 
 ```sh
-mkdir -p ~/Code/Work
-mkdir -p ~/Code/Personal
-mkdir -p ~/Code/University
-mkdir -p ~/Code/Hackathon
 mkdir -p ~/Notes/01-Projects
 mkdir -p ~/Notes/02-Area
 mkdir -p ~/Notes/03-Resources
 mkdir -p ~/Notes/04-Archive
+mkdir -p ~/Projects/Forks
+mkdir -p ~/Projects/Work
+mkdir -p ~/Projects/Playground
+mkdir -p ~/Projects/Repos
 ```
 so it should look like the following
 ![](docs/images/folder-struct.png)
