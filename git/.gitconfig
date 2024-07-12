@@ -20,16 +20,27 @@
 [branch]
 	sort = -committerdate
 [alias]
+    a = add
+    ap = add -p # Patch mode for specified files
+    b = branch
+    c = commit
+    ca = commit -a
+    cb = checkout -b # Checkout branch
+    cam = commit -am # Add all files and commit with message
+    cm = commit -m   # Commit message
+    co = checkout    # Checkout
+    m = merge
+    s = status -sb   # Short status with current branch
+    swc = switch -c  # Create new branch
+    sw = switch      # Change branch
+
     lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
     lgf = "log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium"
-    ch = checkout
-    br = branch
-    st = status
-    cm = commit -m
     back = reset --soft HEAD~1
     hard = reset --hard
-    last = log -1 HEAD
-    wclone = clone --bare
-    wa = worktree add
-    wl = worktree list
-    wr = worktree remove
+    # Initialize, add all files and commit
+    this = !git init && git add . && git commit -m 'Initial commit'
+    # Ignore files: append file to .gitnignore
+    ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo `\n$2` >> .gitignore
+    # Pull data from remore and push local data
+    sync = !git pull && git push
