@@ -11,6 +11,8 @@
 [core]
     editor = nvim
     excludesfile = ~/.gitignore_global
+	  autocrlf = true
+	  attributesfile = ~/.gitattributes
 [pull]
     ff = only
 [merge]
