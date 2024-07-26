@@ -143,12 +143,16 @@ Then, open up nvim and let lazy install all plugins and packages.
 
 ### Step 8 setting up working directories and ssh keys
 First we need to make our ssh key with the following.
+
 ```sh
-ssh-keygen -t ed25519 -C "<EMAIL>"
+ssh-keygen -t ed25519 -f /home/$USER/.ssh/git_signing_key
+ssh-keygen -t ed25519 -f /home/$USER/.ssh/git_authorization_key
+ssh-keygen -t ed25519 -f /home/$USER/.ssh/network_key
 ```
+
 After that we need to tell the global git config to use the key.
 ```sh
-git config --global user.signingkey ~/.ssh/examplekey.pub
+git config --global user.signingkey ~/.ssh/git_signing_key.pub
 ```
 Finally setting up the working directory
 
