@@ -44,3 +44,33 @@
     ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo `\n$2` >> .gitignore
     # Pull data from remore and push local data
     sync = !git pull && git push
+    
+    # ---------- Branching ----------
+    # Conventional commits based branches
+    # https://www.youtube.com/watch?v=Hlp-9cdImSM
+    # https://www.conventionalcommits.org/en/v1.0.0/
+
+    all-private = "!f() { git branch -a | grep private; }; f"
+
+    feat = "!f() { git switch -c feature/$1 && git switch -c private/feature/$1; }; f"
+    feat-squash = "!f() { git switch feature/$1 && git merge --ff --squash private/feature/$1; }; f"
+    
+    fix = "!f() { git switch -c fix/$1 && git switch -c private/fix/$1; }; f" 
+    fix-squash = "!f() { git switch fix/$1 && git merge --ff --squash private/fix/$1; }; f"
+    
+    hotfix = "!f() { git switch -c hotfix/$1 && git switch -c private/hotfix/$1; }; f"
+    hotfix-squash = "!f() { git switch hotfix/$1 && git merge --ff --squash private/hotfix/$1; }; f"  
+    
+    refactor = "!f() { git switch -c refactor/$1 && git switch -c private/refactor/$1; }; f" 
+    refactor-squash = "!f() { git switch refactor/$1 && git merge --ff --squash private/refactor/$1; }; f" 
+    
+    chore = "!f() { git switch -c chore/$1 && git switch -c private/chore/$1; }; f" 
+    chore-squash = "!f() { git switch chore/$1 && git merge --ff --squash private/chore/$1; }; f"
+
+    project-setup = "!f() { git switch -c project-setup/$1 && git switch -c private/project-setup/$1; }; f" 
+    project-setup-squash = "!f() { git switch project-setup/$1 && git merge --ff --squash private/project-setup/$1; }; f"
+
+    # This is used for solo uni work
+    uni = "!f() { git switch -c uni/$1 && git switch -c private/uni/$1; }; f" 
+    uni-squash = "!f() { git switch uni/$1 && git merge --ff --squash private/uni/$1; }; f"  
+    # ---------- End branching ----------
