@@ -20,37 +20,17 @@
 [branch]
 	sort = -committerdate
 [alias]
-    a = add
-    ap = add -p # Patch mode for specified files
-    b = branch
-    c = commit
-    ca = commit -a
-    cb = checkout -b # Checkout branch
-    cam = commit -am # Add all files and commit with message
-    cm = commit -m   # Commit message
-    co = checkout    # Checkout
-    m = merge
     s = status -sb   # Short status with current branch
     swc = switch -c  # Create new branch
     sw = switch      # Change branch
 
     lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
     lgf = "log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium"
-    back = reset --soft HEAD~1
-    hard = reset --hard
-    # Initialize, add all files and commit
-    this = !git init && git add . && git commit -m 'Initial commit'
-    # Ignore files: append file to .gitnignore
-    ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo `\n$2` >> .gitignore
-    # Pull data from remore and push local data
-    sync = !git pull && git push
     
     # ---------- Branching ----------
     # Conventional commits based branches
     # https://www.youtube.com/watch?v=Hlp-9cdImSM
-    # https://www.conventionalcommits.org/en/v1.0.0/
-
-    all-private = "!f() { git branch -a | grep private; }; f"
+    # https://www.conventionalExtra Bold Italiccommits.org/en/v1.0.0/
 
     feat = "!f() { git switch -c feature/$1 && git switch -c private/feature/$1; }; f"
     feat-squash = "!f() { git switch feature/$1 && git merge --ff --squash private/feature/$1; }; f"
@@ -66,11 +46,4 @@
     
     chore = "!f() { git switch -c chore/$1 && git switch -c private/chore/$1; }; f" 
     chore-squash = "!f() { git switch chore/$1 && git merge --ff --squash private/chore/$1; }; f"
-
-    project-setup = "!f() { git switch -c project-setup/$1 && git switch -c private/project-setup/$1; }; f" 
-    project-setup-squash = "!f() { git switch project-setup/$1 && git merge --ff --squash private/project-setup/$1; }; f"
-
-    # This is used for solo uni work
-    uni = "!f() { git switch -c uni/$1 && git switch -c private/uni/$1; }; f" 
-    uni-squash = "!f() { git switch uni/$1 && git merge --ff --squash private/uni/$1; }; f"  
     # ---------- End branching ----------
