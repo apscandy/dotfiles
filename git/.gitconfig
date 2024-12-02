@@ -26,6 +26,14 @@
 
     lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
     lgf = "log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium"
+
+    # ------------ Help -------------
+    # This command makes a git repo locally then makes a private github repo and pushes 
+    # when you use the command make sure to provide a name for example
+    # git make your_github_repo_name
+    #
+    # make = "!f() {git init && git add . && git commit -m 'Initial commit' && gh repo create $1 --private --source . --push ;}; f"
+    # -------------------------------
     
     # ---------- Branching ----------
     # Conventional commits based branches
