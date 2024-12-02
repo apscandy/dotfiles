@@ -13,8 +13,12 @@ alias ll="eza --long --header --icons --git --total-size --git-ignore --tree"
 alias cat="bat"
 alias vim="nvim"
 alias cd="z"
+alias clear="reset"
 alias docker="podman"
 alias lg="lazygit"
+
+# this command is used when you have a password in plain text in the termainl history
+alias cth="reset && history -c" 
 
 # Setting catppuccin mocha for both bat and fzf
 export BAT_THEME="Catppuccin Mocha"
@@ -25,4 +29,7 @@ export FZF_DEFAULT_OPTS=" \
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+
+# run fastfetch on terminal start
+fastfetch
 
