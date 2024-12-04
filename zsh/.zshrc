@@ -14,6 +14,7 @@ alias cat="bat"
 alias vim="nvim"
 alias cd="z"
 alias clear="reset"
+alias tm="tmux"
 alias docker="podman"
 alias lg="lazygit"
 
